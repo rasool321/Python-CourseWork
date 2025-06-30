@@ -1,0 +1,56 @@
+#int type
+a = int(23)
+b = 23 
+print(a,b)
+print(type(a))
+print(type(b))
+#float
+c=2.3
+d=float(2.3)
+print(c,d)
+print(type(c))
+print(type(d))
+#complex
+f=2+3j
+print(f)
+print(type(f))
+#string
+g='hai'
+print(g)
+print(type(g))
+#list
+l=list()
+i=[1,2,3,4,5]
+print(i,l)
+print(type(i))
+print(type(l))
+#tuple
+t=tuple()
+o=(1,2,3)
+print(t,o)
+print(type(t))
+print(type(o))
+#set
+s=set()
+print(s)
+k={1,2,3,3,4,'c',23.45,"d"}
+print(k)
+print(type(k))
+print(s)
+#dict
+u=dict()
+v={'name':"rasool", 'age':12}
+print(v)
+print(u)
+print(type(v))
+print(type(u))
+#bool
+t=True
+f=False
+print(t,f)
+print(type(t))
+print(type(f))
+#none
+d=None
+print(d)
+print(type(d))
