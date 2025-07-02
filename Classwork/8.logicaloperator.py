@@ -1,5 +1,0 @@
-a=int(input("Enter the value1:"))
-b=int(input("Enter the value2:"))
-print("AND:",a%2==0 and b%3==0)
-print("OR:",a%5==0 or b%4==0)
-print("not:",not b%5==0)
