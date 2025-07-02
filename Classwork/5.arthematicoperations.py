@@ -1,9 +1,9 @@
-a = int(input("Enter the 1 value: "))
-b = int(input("Enter the 2 value: "))
-print("Addition: ",a+b)
-print("Subtraction: ",a-b)
-print("Muliplication: ",a*b)
-print("Division: ",a/b)
-print("Floor Division:",a//b)
-print("Modulo",a%b)
-print("Exponential: ",a**b)
+a = 10
+b = 20
+print("Addition(+): ",a+b) #Addition(+):  30
+print("Subtraction(-): ",a-b) #Subtraction(-):  -10
+print("Muliplication(*): ",a*b) #Muliplication(*):  200
+print("Division(/): ",a/b) #Division(/):  0.5
+print("Floor Division(//):",a//b) #Floor Division(//): 0
+print("Modulo(%)",a%b) #Modulo(%) 10
+print("Exponential(**): ",a**b) #Exponential(**):  100000000000000000000
