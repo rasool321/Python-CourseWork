@@ -60,3 +60,12 @@ print(a is b) # Output: True (Both refer to the same object)
 print(a is c) # Output: False (Different objects with the same content)
 print(a is not c) # Output: True
 
+#Logical operators
+a = 5 # Binary: 0101
+b = 3 # Binary: 0011
+print(a & b) # Output: 1 (Binary: 0001 → AND operation)
+print(a | b) # Output: 7 (Binary: 0111 → OR operation)
+print(a ^ b) # Output: 6 (Binary: 0110 → XOR operation)
+print(~a) # Output: -6 (Binary: Inverts bits of 5)
+print(a << 1) # Output: 10 (Binary: 1010 → Shifts left by 1)
+print(a >> 1) # Output: 2 (Binary: 0010 → Shifts right by 1)
