@@ -67,5 +67,6 @@ print(a & b) # Output: 1 (Binary: 0001 → AND operation)
 print(a | b) # Output: 7 (Binary: 0111 → OR operation)
 print(a ^ b) # Output: 6 (Binary: 0110 → XOR operation)
 print(~a) # Output: -6 (Binary: Inverts bits of 5)
-print(a << 1) # Output: 10 (Binary: 1010 → Shifts left by 1)
-print(a >> 1) # Output: 2 (Binary: 0010 → Shifts right by 1)
+print(a << 2) # Output: 20 (Binary: 1010 → Shifts left by 1)
+print(a >> 2) # Output: 1 (Binary: 0010 → Shifts right by 1)
+
