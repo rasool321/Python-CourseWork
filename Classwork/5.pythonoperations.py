@@ -60,7 +60,7 @@ print(a is b) # Output: True (Both refer to the same object)
 print(a is c) # Output: False (Different objects with the same content)
 print(a is not c) # Output: True
 
-#Logical operators
+#Bitwise operators
 a = 5 # Binary: 0101
 b = 3 # Binary: 0011
 print(a & b) # Output: 1 (Binary: 0001 → AND operation)
