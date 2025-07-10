@@ -1,5 +1,29 @@
-import numpy as np
+#Variable Assignment
+name = "Laptop"
+age = 21
+course = True
+print(name,age,course) #Laptop 21 True
 
-arr = np.array([[[[1, 2, 3], [4, 5, 6]],[[2,45,6,],[4,2,6,3]] [[1, 2, 3], [4, 5, 6]]]])
+#Multiple Assignment
+a, b, c = 10, 20, 30
+print(a, b, c) # Output: 10 20 30
 
-print(arr)
+#assign the same value to multiple variables
+x = y = z = 100
+print(x, y, z) # Output: 100 100 100
+
+#Reassignment
+x = 5
+x = 10
+print(x) # Output: 10
+
+#Swapping Variables
+a, b = 5, 10
+a, b = b, a
+print(a, b) # Output: 10 5
+
+
+#Deleting Variables
+x = 100
+del x
+# print(x) # Raises: NameError: name 'x' is not defined
