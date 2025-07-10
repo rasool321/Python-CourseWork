@@ -25,3 +25,4 @@ print("Name: %s | Age: %d | Score: %.2f" % (name, age, score))#Name: ras | Age:2
 print(f"Name: {name} | Age: {age} | Score: {score:.2f}") #Name: ras | Age: 21 | Score: 95.50
 # Using str.format()
 print("Name: {} | Age: {} | Score: {:.1f}".format(name, age,score)) #Name: ras | Age: 21 | Score: 95.5
+
