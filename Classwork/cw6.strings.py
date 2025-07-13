@@ -2,7 +2,7 @@
 # Concatenation
 str1 = "Hello"
 str2 = "World"
-result = str1 + " " + str2
+result = str1 + " " + str2 # " " i space.
 print(result) # Output: Hello World
 # Repetition
 print("rasool! " * 3) # Output: Python! Python! Python!
