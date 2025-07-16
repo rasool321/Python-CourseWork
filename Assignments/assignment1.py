@@ -1,13 +1,13 @@
 # Bike Rental Product Information System
 
 # Collecting Product (Bike) Details
-product_id = int(input("Enter Bike ID: "))
-product_name = input("Enter Bike Model Name: ")
+bike_id = int(input("Enter Bike ID: "))
+bike_name = input("Enter Bike Model Name: ")
 price = float(input("Enter Rental Price per Day (₹): "))
 categories = input("Enter Bike Categories (comma-separated): ").split(",")
-available_stock = int(input("Enter Available Bikes: "))
+available_bikes = int(input("Enter Available Bikes: "))
 rented_bikes = int(input("Enter Rented Bikes: "))
-stock_details = (available_stock, rented_bikes)
+stock_details = (available_bikes, rented_bikes)
 discount_percentage = float(input("Enter Discount Percentage: "))
 features = set(input("Enter Unique Features (comma-separated): ").split(","))
 supplier_name = input("Enter Rental Provider Name: ")
@@ -24,11 +24,11 @@ supplier_details = {
 
 print("\n--- Bike Rental Product Details ---\n")
 
-print("Bike ID", product_id)
-print("Name", product_name)
+print("Bike ID", bike_id)
+print("Name", bike_name)
 print("Rental Price:", price)
 print("Bike Discount: %.2f%%" % discount_percentage)
-print(f"Bike Model: {product_name}")
+print(f"Bike Model: {bike_name}")
 print(f"Rental Price per Day: ₹{price}")
 print(f"Discount Offered: {discount_percentage}%")
 print(f"Available Stock: {stock_details[0]} units")
