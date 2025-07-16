@@ -20,7 +20,7 @@ supplier_details = {
     "location": supplier_location
 }
 
-# Displaying the Product Details using different formatting methods
+# Displaying the Product Details using different formatting methods.
 
 print("\n--- Bike Rental Product Details ---\n")
 
