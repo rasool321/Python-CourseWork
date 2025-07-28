@@ -1,4 +1,4 @@
-'''print("Grocery Store".center(80,'-'))
+print("Grocery Store".center(80,'-'))
 data={
     1:{'Product': 'Rice','price':60},
     2:{'Product': 'Wheat Flour','price':45},
@@ -40,5 +40,3 @@ while True:
     price = int(input("Enter the price:"))
     total += price*quantity
 print(f'Total: {total}')
-
-'''
