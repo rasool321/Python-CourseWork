@@ -1,4 +1,4 @@
-n = int(input("Enter the number:"))
+'''
 if n>0 and n<10:
     print("len is 1")
 if n>9 and n<100:
@@ -13,12 +13,11 @@ if n>99999 and n<1000000:
     print("len is 6")
 
 '''
-
+n = int(input("Enter the number:"))
+m = str(n)
 if n<0:
     n = -n
-m = str(n)
 elif n==0:
     print('1')
 else:
     print(len(m))
-'''
