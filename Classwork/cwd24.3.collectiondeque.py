@@ -1,0 +1,22 @@
+from collections import deque
+'''l=deque()
+l.append(12)
+l.append(1)
+l.append(14)
+l.append(4)
+l.append(67)
+l.pop()
+l.pop()
+l.append(2)
+print(l) #deque([12, 1, 14, 2])
+'''
+l=deque()
+l.appendleft(12)
+l.appendleft(1)
+l.appendleft(14)
+l.appendleft(4)
+l.append(67)
+l.popleft()
+l.popleft()
+l.appendleft(2)
+print(l) #deque([2, 1, 12, 67])from collections import deque
