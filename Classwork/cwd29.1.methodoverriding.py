@@ -1,7 +1,7 @@
 class NormalUser():
     def __init__(self,username):
         self.username=username
-        print('\nWelcome to youtube.. explore our content..')
+        print(f'\nWelcome to youtube "{self.username}". explore our content..')
 
     def playvedio(self):
         print('Ads  Included')
