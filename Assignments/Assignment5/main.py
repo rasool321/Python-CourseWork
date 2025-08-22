@@ -1,15 +1,35 @@
 import random
 from abc import ABC, abstractmethod
+from data import db, songs_db   # importing backend data
 
-# --------- Fake DB (includes a content/artist user) ----------
-db = {
-    "rasool@gmail.com": {"password": "1234", "type": "free"},
-    "siri@gmail.com":   {"password": "abcd", "type": "premium"},
-    "artist@gmail.com": {"password": "xyz",  "type": "content"}
-}
 
-# Global songs "catalog"
-songs_db = ["Shape of You", "Blinding Lights", "Believer", "Heat Waves", "Senorita"]
+# ================= Helper Functions =================
+def song_exists(song):
+    """Check if a song exists in songs_db (any artist)."""
+    for artist, songs in songs_db.items():
+        if song in songs:
+            return True
+    return False
+
+
+def show_all_songs():
+    """Display all songs grouped by artist."""
+    print("\n🎶 Songs in Catalog:")
+    for artist, songs in songs_db.items():
+        print(f"\n-- {artist} --")
+        for s in songs:
+            print(f"   • {s}")
+
+
+def add_song_to_artist(artist, song):
+    """Add a new song to a specific artist in songs_db."""
+    if artist not in songs_db:
+        songs_db[artist] = []
+    if song not in songs_db[artist]:
+        songs_db[artist].append(song)
+        print(f"✅ {song} uploaded under {artist}")
+    else:
+        print("⚠️ Song already exists in DB.")
 
 
 # ================= Abstraction + Encapsulation =================
@@ -24,7 +44,7 @@ class User(ABC):
         return self.__password
 
     def add_to_playlist(self, song):
-        if song in songs_db:
+        if song_exists(song):
             self.playlist.append(song)
             print(f"{song} added to your playlist.")
         else:
@@ -60,13 +80,13 @@ class User(ABC):
 class FreeUser(User):
     def features(self):
         print("\nFeatures of Free Users")
-        print("Stream with ads")
-        print("Limited skips")
-        print("No offline downloads")
+        print("• Stream with ads")
+        print("• Limited skips")
+        print("• No offline downloads")
 
     def play_song(self, song):
         print("Advertisement... [Ad playing]")
-        if song in songs_db:
+        if song_exists(song):
             print(f"Now Playing (Free w/ Ads): {song}")
         else:
             print("Song not available!")
@@ -83,12 +103,12 @@ class FreeUser(User):
 class PremiumUser(User):
     def features(self):
         print("\nFeatures of Premium Users")
-        print("No ads, unlimited skips")
-        print("Offline downloads")
-        print("Higher audio quality")
+        print("• No ads, unlimited skips")
+        print("• Offline downloads")
+        print("• Higher audio quality")
 
     def play_song(self, song):
-        if song in songs_db:
+        if song_exists(song):
             print(f"Now Playing (Premium): {song}")
         else:
             print("Song not available!")
@@ -108,16 +128,12 @@ class ContentUser(FreeUser):
 
     def features(self):
         print("\nFeatures of Content Users (Artist)")
-        print("Stream with ads (like Free)")
-        print("Create & manage playlists")
-        print("Upload new songs to the global catalog")
+        print("• Stream with ads (like Free)")
+        print("• Create & manage playlists")
+        print("• Upload new songs to the global catalog")
 
-    def upload_song(self, song):
-        if song not in songs_db:
-            songs_db.append(song)
-            print(f"{self.email} uploaded new song: {song}")
-        else:
-            print("Song already exists in DB.")
+    def upload_song(self, artist, song):
+        add_song_to_artist(artist, song)
 
 
 # ===================== Menu / UI =====================
@@ -251,7 +267,7 @@ class Menu:
             if choice == "1":
                 user.features()
             elif choice == "2":
-                print("Songs in DB:", songs_db)
+                show_all_songs()
             elif choice == "3":
                 song = input("Enter song name to play: ").strip()
                 user.play_song(song)
@@ -267,13 +283,16 @@ class Menu:
                 self.db[email]["type"] = "premium"
                 return
             elif choice == "8" and isinstance(user, ContentUser):
+                artist = input("Enter artist name: ").strip()
                 song = input("Enter new song name to upload: ").strip()
-                user.upload_song(song)
+                user.upload_song(artist, song)
             elif choice == "9":
                 print("Logged out.")
                 break
             else:
                 print("Invalid option.")
 
-# Run it
-Menu(db)
+
+# Run App
+if __name__ == "__main__":
+    Menu(db)
