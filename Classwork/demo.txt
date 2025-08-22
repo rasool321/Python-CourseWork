@@ -1,0 +1,5 @@
+Python is a high-level, versatile, and beginner-friendly programming language. 
+It emphasizes readability with simple syntax, making coding easier. 
+Widely used in web development, data science, AI, automation, and more, 
+Python supports multiple libraries and frameworks. Its cross-platform 
+compatibility and strong community make it one of the most popular languages today.
