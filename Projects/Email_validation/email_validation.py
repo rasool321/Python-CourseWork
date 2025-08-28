@@ -24,7 +24,7 @@ def send_email(to_email,subject,body):
         server.login(SENDER_EMAIL,SENDER_PASSWORD)
         server.sendmail(SENDER_EMAIL,to_email,msg.as_string())
 
-        print(f'Email sent to {to_email}')
+        print(f'Email sent to {to_email} succeessfully..')
     
     except Exception as e:
         print(f'Error sending email to {to_email} : {e}')

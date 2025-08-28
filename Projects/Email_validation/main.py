@@ -1,7 +1,7 @@
 import email_validation
 
 def main():
-    print("=== Email Sender ===")
+    print("=== Welcome to Email Sender ===")
     print("1. Send single email")
     print("2. Send bulk emails from CSV")
     choice = input("Enter your choice (1/2): ").strip()
